@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/Recieved.css' %}" media="screen">
+{% endblock links %}
+
+{% block content %}
+<section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" data-image-width="1920"
+  data-image-height="1080" id="sec-3bf7">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <h1 class="u-text u-title u-text-1">thank you for shopping with us !</h1>
+  </div>
+</section>
+<section class="u-black u-clearfix u-section-2" id="sec-9aa4">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <img class="u-image u-image-round u-preserve-proportions u-image-1" src="{% static 'images/3556904.png' %}" alt=""
+      data-image-width="512" data-image-height="512" data-animation-name="rotateIn" data-animation-duration="1250"
+      data-animation-delay="1250" data-animation-direction="">
+    <h1 class="u-text u-text-default u-text-1" data-animation-name="fadeIn" data-animation-duration="1250"
+      data-animation-delay="1000" data-animation-direction="">Order Recieved !</h1>
+    <h5 class="u-text u-text-default u-text-2">To track order or other specifications , contact<br>
+    </h5>
+    <a href="tel:+91 7092592272"
+      class="u-active-none u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1">+91
+      7092592272</a>
+    <h5 class="u-text u-text-default u-text-3">Or Whatsapp us !</h5>
+    <a href="https://wa.link/ex2c2z"
+      class="u-active-none u-btn u-button-style u-hover-none u-none u-text-hover-palette-2-base u-text-palette-2-base u-btn-2"><span
+        class="u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 418.135 418.135" x="0px" y="0px"
+          style="width: 1em; height: 1em;">
+          <g>
+            <path style="fill:currentColor;"
+              d="M198.929,0.242C88.5,5.5,1.356,97.466,1.691,208.02c0.102,33.672,8.231,65.454,22.571,93.536   L2.245,408.429c-1.191,5.781,4.023,10.843,9.766,9.483l104.723-24.811c26.905,13.402,57.125,21.143,89.108,21.631   c112.869,1.724,206.982-87.897,210.5-200.724C420.113,93.065,320.295-5.538,198.929,0.242z M323.886,322.197   c-30.669,30.669-71.446,47.559-114.818,47.559c-25.396,0-49.71-5.698-72.269-16.935l-14.584-7.265l-64.206,15.212l13.515-65.607   l-7.185-14.07c-11.711-22.935-17.649-47.736-17.649-73.713c0-43.373,16.89-84.149,47.559-114.819   c30.395-30.395,71.837-47.56,114.822-47.56C252.443,45,293.218,61.89,323.887,92.558c30.669,30.669,47.559,71.445,47.56,114.817   C371.446,250.361,354.281,291.803,323.886,322.197z">
+            </path>
+            <path style="fill:currentColor;"
+              d="M309.712,252.351l-40.169-11.534c-5.281-1.516-10.968-0.018-14.816,3.903l-9.823,10.008   c-4.142,4.22-10.427,5.576-15.909,3.358c-19.002-7.69-58.974-43.23-69.182-61.007c-2.945-5.128-2.458-11.539,1.158-16.218   l8.576-11.095c3.36-4.347,4.069-10.185,1.847-15.21l-16.9-38.223c-4.048-9.155-15.747-11.82-23.39-5.356   c-11.211,9.482-24.513,23.891-26.13,39.854c-2.851,28.144,9.219,63.622,54.862,106.222c52.73,49.215,94.956,55.717,122.449,49.057   c15.594-3.777,28.056-18.919,35.921-31.317C323.568,266.34,319.334,255.114,309.712,252.351z">
+            </path>
+          </g>
+        </svg><img></span>&nbsp;​&nbsp;Message on Whatsapp
+    </a>
+    <a href="{% url "nnc:orders" %}"
+      class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-27 u-text-body-alt-color u-btn-3"><span
+        class="u-icon u-icon-2"><svg class="u-svg-content" viewBox="0 0 512 512" style="width: 1em; height: 1em;">
+          <path
+            d="m280 192a8 8 0 0 1 -8-8v-80a56 56 0 0 0 -112 0v80a8 8 0 0 1 -16 0v-80a72 72 0 0 1 144 0v80a8 8 0 0 1 -8 8z"
+            fill="#dadcde"></path>
+          <path d="m296 472h-272l16-320h240z" fill="#eb423f"></path>
+          <path d="m360 472h-64l-16-320h64z" fill="#d13330"></path>
+          <path
+            d="m328.47 431.99c-.16.01-.32.01-.48.01a8 8 0 0 1 -7.98-7.53l-16-272c-.01-.16-.01-.31-.01-.47h16.02l15.97 271.53a8.007 8.007 0 0 1 -7.52 8.46z"
+            fill="#a82a27"></path>
+          <path d="m488 472h-64l-1-12.93v-.01l-15-195.06h64l14.75 191.69v.01z" fill="#eba72e"></path>
+          <path
+            d="m456.8 431.96a7.322 7.322 0 0 1 -.81.04 8 8 0 0 1 -7.95-7.2l-.29-2.86-15.71-157.14a7.143 7.143 0 0 1 -.04-.8h16.04l15.72 157.21.2 1.99a8 8 0 0 1 -7.16 8.76z"
+            fill="#e09f2c"></path>
+          <path
+            d="m488 472h-9.62l-22.38-33.58-22.38 33.58h-9.62l-1-12.93v-.01l24.75-37.12 1.59-2.38a8.01 8.01 0 0 1 13.32 0l1.1 1.65 22.99 34.48v.01z"
+            fill="#e09f2c"></path>
+          <path d="m424 472h-208l16-208h176z" fill="#f7b030"></path>
+          <path
+            d="m328 416h-16a40.045 40.045 0 0 1 -40-40v-64a8 8 0 0 1 16 0v64a24.027 24.027 0 0 0 24 24h16a24.027 24.027 0 0 0 24-24v-64a8 8 0 0 1 16 0v64a40.045 40.045 0 0 1 -40 40z"
+            fill="#e9eef2"></path>
+          <path d="m96 184h16v48h-16z" fill="#dadcde"></path>
+          <path
+            d="m104 192a8 8 0 0 1 -8-8v-80a72 72 0 0 1 144 0v80a8 8 0 0 1 -16 0v-80a56 56 0 0 0 -112 0v80a8 8 0 0 1 -8 8z"
+            fill="#e9eef2"></path>
+          <path d="m128 296h-48v-64l24-16 24 16z" fill="#f7b030"></path>
+        </svg><img></span>&nbsp;View your orders
+    </a>
+    <a href="{% url 'nnc:allproduct' %}"
+      class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-27 u-text-body-alt-color u-btn-4"><span
+        class="u-icon u-icon-3"><svg class="u-svg-content" viewBox="0 0 512 512" style="width: 1em; height: 1em;">
+          <g>
+            <g>
+              <path d="m76 257-30-15v-60h30z" fill="#665151"></path>
+            </g>
+            <g>
+              <path d="m226 332h-180v-90h180z" fill="#ff7f40"></path>
+            </g>
+            <path d="m136 242h90v90h-90z" fill="#f25a3c"></path>
+            <g id="_Snack_Booth_1_">
+              <g>
+                <path d="m346 182h30v135h-30z" fill="#4d3535"></path>
+              </g>
+              <g>
+                <path d="m76 452h30v60h-30z" fill="#665151"></path>
+              </g>
+              <g>
+                <path d="m496 332h-105l15-30h90z" fill="#4d3535"></path>
+              </g>
+            </g>
+            <path d="m151 103.4v80.4l-60 30-75-37.5v-72.9l75.9-30z" fill="#ffb95a"></path>
+            <path d="m271 103.4v80.4l-60 30-60-30v-80.4l60-30z" fill="#f25a3c"></path>
+            <g>
+              <path d="m211 73.4v140.4l60-30v-80.4z" fill="#e63a3a"></path>
+            </g>
+            <path d="m406 103.4v72.9l-75 37.5-60-30v-80.4l67.5-30z" fill="#ff9833"></path>
+            <g>
+              <path d="m346 467h-330v-165h390v129.272l-20.229-7.515c-18.677-6.972-39.771 8.204-39.771 28.243z"
+                fill="#ffb95a"></path>
+            </g>
+            <g>
+              <path d="m167.8 0 21.6 52.7-38.4 50.7h-135l50.7-103.4z" fill="#ffdc73"></path>
+            </g>
+            <path d="m271 103.4h-120l16.8-103.4h86.7l38.25 52.7z" fill="#ff7f40"></path>
+            <g>
+              <path d="m292.75 52.7-38.25-52.7h-43.5v103.4h60z" fill="#f25a3c"></path>
+            </g>
+            <path d="m406 103.4h-135l-16.5-103.4h100.8z" fill="#ffb95a"></path>
+            <path d="m211 467h135v-15c0-20.039 21.094-35.215 39.771-28.242l20.229 7.514v-129.272h-195z" fill="#ff9833">
+            </path>
+            <circle cx="376" cy="452" fill="#4d3535" r="60"></circle>
+            <circle cx="376" cy="452" fill="#ffeacc" r="15"></circle>
+          </g>
+        </svg><img></span>&nbsp;Continue shopping
+    </a>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'css/Home.css' %}">
+<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+<link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One:400">
+{% endblock %}
+
+{% block content %}
+<section class="u-align-left u-border-3 u-border-black u-clearfix u-image u-section-1" id="sec-5aa9"
+    data-image-width="1600" data-image-height="910">
+    <div class="u-clearfix u-sheet u-sheet-1">
+
+    </div>
+</section>
+
+<section class="u-black u-clearfix u-section-2" id="sec-f66f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="cats" style="font-size: 5rem;">Categories</h1>
+        <div class="container categ">
+            
+            {% for category in categories %}
+            <a href="{% url 'nnc:product' slug=category.slug %}">
+                <div id="navchoc" class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <div class="icon">
+                                <h1 class="cardreader" style="font-size: 2rem;margin-top: 2%;">{{category.title}}</h1>
+                                <img class="cookief" src="{{category.category_image.url}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>
+                                <p>{{category.heading}}</p>
+                            </h3>
+                            <p>{{category.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            {% endfor %}
+            <!-- <div id="navdates" class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="icon">
+                            <h1 class="cardreader" style="font-size: 2rem;margin-top: 2%;">Dates</h1>
+                            <img class="cookie"
+                                src="https://img-premium.flaticon.com/png/512/2319/premium/2319898.png?token=exp=1627103427~hmac=b0f012a0e06dd92c7f99867838cd3e57"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="face face2">
+                    <div class="content">
+                        <h3>
+                            <a href="#" target="_blank"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: 1.4em;color: #4aada9;">Variety
+                                ++ dates</a>
+                        </h3>
+                        <p style="font-size: 1.2em;font-weight: bold;">Here comes dates paragraph. Bullshit</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="navsauce" class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="icon">
+                            <h1 class="cardreader" style="font-size: 2rem;margin-top: 2%;">Sauces & Seasoning</h1>
+                            <img class="cookief" src="https://image.flaticon.com/icons/png/512/3063/3063422.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <h3>
+                            <a href="#" target="_blank">Defeating Dominoes</a>
+                        </h3>
+                        <p>Lets defeat dominoezzzzzzzzz</p>
+                    </div>
+                </div>
+            </div>
+            <div id="navdry" class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="icon">
+                            <h1 class="cardreader" style="font-size: 2rem;margin-top: 2%;">Dry Fruits</h1>
+                            <img class="cookie" src="https://image.flaticon.com/icons/png/512/1360/1360864.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <h3>
+                            <a href="#" target="_blank">Real healthy</a>
+                        </h3>
+                        <p>Uff really tired of this</p>
+                    </div>
+                </div>
+            </div>
+            <div id="navdiet" class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="icon">
+                            <h1 class="cardreader" style="font-size: 2rem;margin-top: 2%;">Diet products</h1>
+                            <img class="cookie" src="https://image.flaticon.com/icons/png/512/1504/1504842.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <h3>
+                            <a href="#" target="_blank"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: 1.4em;color: #4aada9;">Clean
+                                the system</a>
+                        </h3>
+                        <p style="font-size: 1.2em;font-weight: bold;">Oops no info here!</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+</section>
+<style class="u-overlap-style">
+    .u-overlap:not(.u-sticky-scroll) .u-header {}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock content %}

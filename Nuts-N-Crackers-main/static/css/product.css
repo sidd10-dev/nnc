@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+
+#container{
+	box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+	height: 350px;
+	width: 700px;
+  
+	
+}
+
+
+
+.product-details {
+	text-align: left;
+	overflow:hidden;
+	padding: 30px;
+	height: 100%;
+	float:left;
+	width: 40%;
+    /* flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */ 
+
+}
+
+#container .product-details h1{
+	font-family: 'Bebas Neue', cursive;
+	display: inline-block;
+	position: relative;
+	font-size: 30px;
+	color: #344055;
+	margin: 0;
+	
+}
+
+#container .product-details h1:before{
+	position: absolute;
+	content: '';
+	right: 0%; 
+	top: 0%;
+	transform: translate(25px, -15px);
+	font-family: 'Bree Serif', serif;
+	display: inline-block;
+	background: #ffe6e6;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 5px;
+	color: white;
+	margin: 0;
+	animation: chan-sh 6s ease infinite;
+
+}
+
+
+
+	
+
+.desc
+{
+    font-family: 'Great Vibes',cursive;
+    font-size: 3rem;
+}
+.hint-star {
+	display: inline-block;
+	margin-left: 0.5em;
+	color: gold;
+	width: 50%;
+}
+
+
+#container .product-details > p {
+font-family: 'EB Garamond', serif;
+	text-align: center;
+	font-size: 18px;
+	color: #7d7d7d;
+	
+}
+.control{
+	position: absolute;
+	bottom: 5%;
+	left: 22.8%;
+	
+}
+.btn {
+
+	transform: translateY(0px);
+	transition: 0.3s linear;
+	background:  #809fff;
+	border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	font-family: 'Bebas Neue', cursive;
+	border: none;
+	color: #eee;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.btn:hover{transform: translateY(-6px);
+	background: #1a66ff;}
+
+.btn span {
+	font-family: 'Farsan', cursive;
+	transition: transform 0.3s;
+	display: inline-block;
+  padding: 10px 20px;
+	font-size: 1.2em;
+	margin:0;
+	
+}
+.btn .price, .shopping-cart{
+	background: #333;
+	border: 0;
+	margin: 0;
+}
+
+.btn .price {
+	transform: translateX(-10%); padding-right: 15px;
+}
+
+.btn .shopping-cart {
+	transform: translateX(-100%);
+  position: absolute;
+	background: #333;
+	z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.btn .buy {z-index: 3; font-weight: bolder;}
+
+.btn:hover .price {transform: translateX(-110%);}
+
+.btn:hover .shopping-cart {transform: translateX(0%);}
+
+
+
+.product-image {
+	transition: all 0.3s ease-out;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	float: right;
+	width: 45%;
+}
+
+.custom-select {
+	position: relative;
+	font-family: Arial;
+	z-index: 100;
+  }
+  
+  .custom-select select {
+	display: none; 
+	z-index: 100;/*hide original SELECT element: */
+  }
+  
+  .select-selected {
+	background-color: black;
+	z-index: 100;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+	position: absolute;
+	content: "";
+	top: 14px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+	border-color: transparent transparent #fff transparent;
+	top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+	color: #ffffff;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+	cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+	position: absolute;
+	background-color: black;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+	display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+	background-color: rgba(255, 255, 255, 0.1);
+  }
+
+#container img {width: 100%;height: 100%;}
+
+.info {
+    background: rgba(27, 26, 26, 0.9);
+    font-family: 'Bree Serif', serif;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    line-height: 3;
+    text-align: left;
+    font-size: 130%;
+    cursor: pointer;
+    color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.information
+{
+    color: black;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ * Licensed under the MIT License
+ *
+ * Sass/SCSS source: https://goo.gl/qEV26
+ * PSD by Hemn Chawroka: https://goo.gl/nXZHJ
+ */
+
+ body {
+	font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+	color: #404040;
+	background: #93cedf;
+  }
+  
+  .container {
+	margin: 80px auto;
+	width: 400px;
+	text-align: center;
+  }
+  
+  .container > .dropdown {
+	margin: 0 20px;
+	vertical-align: top;
+  }
+  
+  .dropdown {
+	display: inline-block;
+	
+	position: relative;
+	overflow: hidden;
+	height: 35px;
+	width: 200px;
+	background: #f2f2f2;
+	border: 3px solid black;
+	border-radius: 3px;
+	background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+	background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+	background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  }
+  
+  .dropdown:before, .dropdown:after {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	top: 9px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border: 4px dashed;
+	border-color: #888888 transparent;
+	pointer-events: none;
+  }
+  
+  .dropdown:before {
+	border-bottom-style: solid;
+	border-top: none;
+  }
+  
+  .dropdown:after {
+	margin-top: 7px;
+	border-top-style: solid;
+	border-bottom: none;
+  }
+  
+  .dropdown-select {
+	position: relative;
+	width: 130%;
+	margin: 0;
+	padding: 6px 8px 6px 10px;
+	height: 28px;
+	line-height: 14px;
+	font-size: 20px;
+	color: #62717a;
+	text-shadow: 0 1px white;
+	background: #f2f2f2; /* Fallback for IE 8 */
+	background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+  }
+  
+  .dropdown-select:focus {
+	z-index: 3;
+	width: 100%;
+	color: #394349;
+	outline: 2px solid -webkit-focus-ring-color;
+	outline-offset: -2px;
+  }
+  
+  .dropdown-select > option {
+	margin: 3px;
+	padding: 6px 8px;
+	text-shadow: none;
+	background: #f2f2f2;
+	border-radius: 3px;
+	cursor: pointer;
+  }
+  
+  /* Fix for IE 8 putting the arrows behind the select element. */
+  
+  .lt-ie9 .dropdown {
+	z-index: 1;
+  }
+  
+  .lt-ie9 .dropdown-select {
+	z-index: -1;
+  }
+  
+  .lt-ie9 .dropdown-select:focus {
+	z-index: 3;
+  }
+  
+  /* Dirty fix for Firefox adding padding where it shouldn't. */
+  
+  @-moz-document url-prefix() {
+	.dropdown-select {
+	  padding-left: 6px;
+	}
+  }
+  
+  .dropdown-dark {
+	background: #444;
+	border-color: #111111 #0a0a0a black;
+	background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+	background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+	background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-dark:before {
+	border-bottom-color: #aaa;
+  }
+  
+  .dropdown-dark:after {
+	border-top-color: #aaa;
+  }
+  
+  .dropdown-dark .dropdown-select {
+	color: #aaa;
+	text-shadow: 0 1px black;
+	background: #444;  /* Fallback for IE 8 */
+  }
+  
+  .dropdown-dark .dropdown-select:focus {
+	color: #ccc;
+  }
+  
+  .dropdown-dark .dropdown-select > option {
+	background: #444;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  }
+  
+
+
+.info h2 {text-align: center}
+.product-image:hover .info{transform: translateX(0);}
+
+.info ul li{transition: 0.3s ease;}
+.info ul li:hover{transform: translateX(50px) scale(1.3);}
+
+.product-image:hover img {transition: all 0.3s ease-out;}
+.product-image:hover img {transform: scale(1.2, 1.2);}
+
+
+@media screen and (max-width: 768px) {
+	
+	.info
+	{
+	  width: 100%;
+	  line-height: 2;
+	  font-size: 100%;
+	}
+  }
+  
+  @media screen and (max-width: 577px) {
+	.info
+	{
+	  width: 100%;
+	  line-height: 2;
+	  font-size: 150%;
+	  margin-top: 10%;
+	  margin-left: 8rem;
+	}
+	.product-image
+	{
+		width: 30rem;
+	}
+	.btn
+	{
+		position:relative;
+		margin-top:-200rem;
+		margin-bottom: -300rem;
+		z-index: 1000;
+	}
+  }

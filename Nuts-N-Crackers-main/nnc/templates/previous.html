@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/previous.css' %}" media="screen">
+{% endblock links %}
+
+{% block content %}
+<section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" data-image-width="1280"
+  data-image-height="825" id="sec-a068">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <h1 class="u-text u-text-default u-title u-text-1">Thank you for shopping with us !</h1>
+    <p class="u-large-text u-text u-text-variant u-text-2"></p>
+  </div>
+</section>
+<section class="u-black u-clearfix u-section-2" id="sec-3d60">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <div class="main-container">
+      <div class="heading">
+        <h1 class="heading__title">Here is all your previous orders, {{user.username}}</h1>
+        <p class="heading__credits"><a class="heading__link" target="_blank" href="aboutpagedasots.html">For any
+            queries, visit the About section</a></p>
+      </div>
+      <div class="cards">
+        {% for order in orders %}
+        <div class="card card-">
+          <h2 style="font-family: 'Rajdhani',sans-serif;" class="card__title">Order Number : {{order.pk}}<br><br>Order Date : {{order.date_ordered}}</h2>
+          <p class="card__apply">
+            <a class="card__link" style="color: red;" href="{% url 'nnc:orderdetail' pk=order.pk %}">View order </a>
+          </p>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+</section>
+{% endblock content %}

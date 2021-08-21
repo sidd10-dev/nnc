@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/deliveryitem.css' %}" media="screen">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock links %}
+
+
+{% block content %}
+<section class="u-align-left u-black u-clearfix u-section-1" id="sec-4909">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+      <h1 style="text-align: left;">
+        <span style="line-height: 2.0;">Customer Name :&nbsp;{{order.user.username}}</span>
+      </h1>
+      <h4 style="text-align: left;">Address: {{order.customer.address}}</h4>
+      <p>
+        <br>
+      </p>
+      <h4 style="text-align: left;">Contact No :&nbsp;{{order.customer.phone_no}}</h4>
+      <p style="text-align: left;">
+        <span style="font-size: 1.5rem;">Order Number :{{order.pk}}</span>
+      </p>
+      <p style="text-align: left;">
+        <span style="font-size: 1.5rem;">Total Amount :{{order.total}}</span>
+      </p>
+      <p style="text-align: left;">
+        <span style="font-size: 1.5rem;">Order Items :&nbsp;&nbsp;</span>
+      </p>
+    </div>
+    <div class="containerzz">
+      {% for op in orderproducts %}
+      <div class="card" style="width:400px;border-radius: 0%;">
+        <img class="card-img-top" src="https://m.media-amazon.com/images/I/31GVbXE3Y8L.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 style="color: black;" class="card-title">{{op.product.product.name}}</h4>
+          <p style="color: black;" class="card-text">Quantity : {{op.quantity}}</p>
+          <p style="color: black;" class="card-text">Price : {{op.product.product.price}}</p>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+<section class="u-black u-clearfix u-section-2" id="sec-99da">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <a href="{% url 'nnc:setdelivered' pk=order.pk %}"
+      class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-27 u-text-body-alt-color u-btn-1"
+      data-animation-name="flipIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="X">
+      &nbsp;Delivered&nbsp;&nbsp;<span class="u-icon u-text-palette-2-base u-icon-1"><svg class="u-svg-content"
+          viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;">
+          <g>
+            <g>
+              <path
+                d="M497.36,69.995c-7.532-7.545-19.753-7.558-27.285-0.032L238.582,300.845l-83.522-90.713    c-7.217-7.834-19.419-8.342-27.266-1.126c-7.841,7.217-8.343,19.425-1.126,27.266l97.126,105.481    c3.557,3.866,8.535,6.111,13.784,6.22c0.141,0.006,0.277,0.006,0.412,0.006c5.101,0,10.008-2.026,13.623-5.628L497.322,97.286    C504.873,89.761,504.886,77.54,497.36,69.995z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M492.703,236.703c-10.658,0-19.296,8.638-19.296,19.297c0,119.883-97.524,217.407-217.407,217.407    c-119.876,0-217.407-97.524-217.407-217.407c0-119.876,97.531-217.407,217.407-217.407c10.658,0,19.297-8.638,19.297-19.296    C275.297,8.638,266.658,0,256,0C114.84,0,0,114.84,0,256c0,141.154,114.84,256,256,256c141.154,0,256-114.846,256-256    C512,245.342,503.362,236.703,492.703,236.703z">
+              </path>
+            </g>
+          </g>
+        </svg><img></span>&nbsp;
+    </a>
+  </div>
+</section>
+<style class="u-overlap-style">
+  .u-overlap:not(.u-sticky-scroll) .u-header {}
+</style>
+{% endblock content %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/Cart.css' %}" media="screen">
+<script src="{% static 'js/Cart.js' %}"></script>
+{% endblock links %}
+
+
+{% block content %}
+<section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" data-image-width="1280"
+  data-image-height="825" id="sec-a068">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    {% if count == 0 %}
+    <h1 class="u-text u-text-default u-title u-text-1">No Items Yet!</h1>
+    <p class="u-large-text u-text u-text-variant u-text-2">Order some nuts bro</p>
+    {% else %}
+    <h1 class="u-text u-text-default u-title u-text-1">Items on your Cart</h1>
+    <p class="u-large-text u-text u-text-variant u-text-2">blamba boosa sooca</p>
+    {% endif %}
+  </div>
+</section>
+<section class="u-clearfix u-section-2 blamba" id="sec-3d60">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <div class="container">
+
+      <section id="cart">
+        {% for op in orderproduct %}
+        <article class="product">
+          <header>
+            <a class="remove" href = "{% url 'nnc:remove' pk=op.pk %}">
+              <img src="{{op.product.product.product_image.url}}" alt="">
+
+              <h3>Remove product</h3>
+            </a>
+          </header>
+
+          <div class="content">
+
+            <h1>{{op.product.product.name}}</h1>
+
+            {{op.product.product.description}}
+
+            <!-- <div title="You have selected this product to be shipped in the color yellow." style="top: 0"
+              class="color yellow"></div>
+            <div style="top: 43px" class="type small">XXL</div> -->
+          </div>
+
+          <footer class="content">
+            <a href = "{% url 'nnc:decrease' pk=op.pk %}"><span class="qt-minus">-</span></a>
+            <span class="qt">{{op.quantity}}</span>
+            <a href = "{% url 'nnc:increase' pk=op.pk %}"><span class="qt-plus">+</span></a>
+
+            <h2 class="full-price">
+              {{op.calcprice}}
+            </h2>
+
+            <h2 class="price">
+              {{op.product.product.price}}
+            </h2>
+          </footer>
+        </article>
+        {% endfor %}
+      </section>
+
+    </div>
+
+    <footer id="site-footer">
+      <div class="container clearfix">
+
+        <div class="left">
+          <h2 class="subtotal">Subtotal: <span>{{total}}</span>₹</h2>
+          <h3 class="tax">Number of Items: <span>{{count}}</span></h3>
+          <!-- <h3 class="shipping">Customer: <span>5.00</span>₹</h3> -->
+        </div>
+
+        <div class="right">
+          <h1 class="total">Total: <span>{{total}}</span>₹</h1>
+          <a class="btn" href = "{% url 'nnc:checkout' %}">Checkout</a>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+</section>
+
+
+{% endblock content %}
